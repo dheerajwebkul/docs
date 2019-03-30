@@ -223,9 +223,9 @@ We could (of course) use Smarty to render a template, but it's a chance to disco
  *
  * @param $params array
  */
-public function hookDisplayDashboardToolbarIcons($params)
+public function hookDisplayDashboardToolbarIcons($hookParams)
 {
-    if ($this->isSymfonyContext() && $params['route'] === 'admin_product_catalog') {
+    if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
         $products = $this->getProducts(1);
         $productsXml = $this->serializeProducts($products);
         $filepath = _PS_ROOT_DIR_.'/products.xml';
