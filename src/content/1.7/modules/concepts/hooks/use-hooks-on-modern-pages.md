@@ -246,9 +246,9 @@ We have extracted business logic into specific functions.
 And now, the template:
 
 ```twig
-{# in views/PrestaShop/Foo/download_link.twig #}
+{# in modules/foo/views/PrestaShop/Foo/download_link.twig #}
 <a id="desc-product-export" class="list-toolbar-btn" href="{{ filepath }}" download>
-  <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo' }}" data-html="true" data-placement="top">
+  <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo') }}" data-html="true" data-placement="top">
     <i class="material-icons">cloud_upload</i>
   </b>
 </a>
